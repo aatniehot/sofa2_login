@@ -20,8 +20,10 @@ public class LoginController {
 
     @PostMapping(value = "login")
     public String loginHandler(User user){
-        String response = ace.getLogin(user);
-        System.out.println(response);
+        String post = ace.postLogin(user);
+        String get = ace.getLogin(user);
+        System.out.println(post);
+        System.out.println(get);
         return null;
     }
 }
