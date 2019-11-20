@@ -1,4 +1,4 @@
-package sofa2.login.Model;
+package sofa2.login.model;
 
 public enum UserRole {
 

@@ -1,13 +1,21 @@
-package sofa2.login.Controller;
+package sofa2.login.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import sofa2.login.Model.User;
+import sofa2.login.model.User;
 
 @Controller
 public class LoginController {
     @Autowired AceController ace;
+
+    @GetMapping(value = "login")
+    public String indexHandler(Model model) {
+        model.addAttribute("user", new User());
+        return "login";
+    }
 
 
     @PostMapping(value = "login")

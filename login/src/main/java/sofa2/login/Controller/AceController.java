@@ -1,4 +1,4 @@
-package sofa2.login.Controller;
+package sofa2.login.controller;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import sofa2.login.Model.User;
+import sofa2.login.model.User;
 
 @RestController
 public class AceController {
