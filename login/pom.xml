@@ -15,7 +15,7 @@
 	<description>Sofa Bank application v2.0 login</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>1.12</java.version>
 	</properties>
 
 	<dependencies>
