@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import sofa2.login.model.LoginResponse;
 import sofa2.login.model.User;
 
 @Controller
@@ -21,9 +23,9 @@ public class LoginController {
     @PostMapping(value = "login")
     public String loginHandler(User user){
         String post = ace.postLogin(user);
-        String get = ace.getLogin(user);
+        LoginResponse get = ace.getLogin(user);
         System.out.println(post);
-        System.out.println(get);
+        System.out.println(get.getStatus() + get.getMessage());
         return null;
     }
 }
